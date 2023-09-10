@@ -1,0 +1,14 @@
+body {
+	font-family: "IBM Plex Sans", sans-serif;
+}
+
+a {
+	color: #f8f8ff8f;
+	cursor: pointer;
+	transition: color .5s;
+	text-decoration: none;
+
+	&:hover {
+		color: white
+	}
+}
