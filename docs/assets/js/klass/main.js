@@ -8,10 +8,10 @@ $(window).on("load", function() {
 
 
     // Mobile Menu
-    $(".menu-item", "#header").on("click", function() {
-        $(".menu-item", "#header").fadeToggle(300);
-        $(".exit-item", "#header").fadeToggle(300);
-        $(".header-menu-container", "#header").fadeToggle(500, function() {
+    $(".js-hamburger", "#header").on("click", function() {
+        $(".js-hamburger", "#header").toggleClass("is-active");
+        // $(".exit-item", "#header").fadeToggle(300);
+        $(".header-menu-container", ".header").fadeToggle(500, function() {
             var d = 200,
                 factor = d / 3 * 2;
             $(".header-menu-container ul li", "#header").each(function() {
@@ -19,21 +19,6 @@ $(window).on("load", function() {
             });
             $(".menu-quote", "#header").each(function() {
                 $(this).delay(d = d + factor).animate({ opacity: '1' }, 300);
-            });
-        });
-    });
-   //Wow Animation
-    $(".exit-item", "#header").on("click", function() {
-        $(".menu-item", "#header").fadeToggle(300);
-        $(".exit-item", "#header").fadeToggle(300);
-        $(".header-menu-container", "#header").fadeToggle(500, function() {
-            var d = 100,
-                factor = d / 3 * 2;
-            $(".header-menu-container ul li", "#header").each(function() {
-                $(this).delay(d = d + factor).animate({ opacity: '0' }, 100);
-            });
-            $(".menu-quote", "#header").each(function() {
-                $(this).delay(d = d + factor).animate({ opacity: '0' }, 100);
             });
         });
     });
@@ -54,7 +39,7 @@ $(window).on("load", function() {
       $(this).addClass('active');
       var filterValue = $(this).attr('data-filter');
       $container.isotope({ filter: filterValue });
-    });	
+    });
 
     // Blog Masonry
     var $blog_container = $('#main-blog-container');
@@ -65,7 +50,7 @@ $(window).on("load", function() {
       itemSelector: '.blog-item'
     });
 
- 
+
 });
 
 // Sticky Menu

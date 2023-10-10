@@ -1,4 +1,6 @@
-
+.home {
+	background-image: url("/assets/images/dirty-bg.jpeg");
+}
 
 .glitch {
 	display: flex;
@@ -85,8 +87,35 @@
 
 	&__inner {
 		padding: 20px;
+		width: 650px;
+		max-width: 100%;
 	}
 }
+
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: repeating-linear-gradient(0deg, #0E0D0E 25%, #0E0D0E 50%, #171819 50%, #171819 75%);
+	background-size: 10px 10px;
+
+	&__list {
+		list-style: none;
+		text-align: center;
+		padding: 0
+	}
+
+	&__item {
+		margin: 1rem 0;
+		font-size: 22px;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
 
 
 
