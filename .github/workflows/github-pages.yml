@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Install libvips
         run: sudo apt-get install libvips-tools
+
+      - name: Checkout + Cache
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         with:
@@ -18,10 +20,22 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@2.1.0
+
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
         with:
-          token: ${{ secrets.FMP_GITHUB_TOKEN }}
-          jekyll_src: 'docs'
+          ruby-version: 2.7
+          bundler-cache: true
+
+      - name: Jekyll build
+        run: bundle exec jekyll build
         env:
-          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
-          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
+          JEKYLL_ENV: production
+
+#      - uses: helaili/jekyll-action@2.1.0
+#        with:
+#          token: ${{ secrets.FMP_GITHUB_TOKEN }}
+#          jekyll_src: 'docs'
+#        env:
+#          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
+#          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
