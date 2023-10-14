@@ -1,18 +1,25 @@
 name: Build and deploy Jekyll site to GitHub Pages
 
-#on:
-#  push:
-#    branches:
-#      - klass-theme
-#
-#jobs:
-#  github-pages:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#      - uses: helaili/jekyll-action@2.1.0
-#        with:
-#          token: $
-#        env:
-#          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
-#          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
+on:
+  push:
+    branches:
+      - klass-theme
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+          with:
+            path: vendor/bundle
+            key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+            restore-keys: |
+              ${{ runner.os }}-gems-
+      - uses: helaili/jekyll-action@2.1.0
+        with:
+          token: ${{ secrets.FMP_GITHUB_TOKEN }}
+          jekyll_src: 'docs'
+        env:
+          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
+          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
