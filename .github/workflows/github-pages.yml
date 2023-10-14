@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install libvips
-        run: sudo apt-get install libvips glib-2.0
+        run: sudo apt-get install libvips-tools
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         with:
