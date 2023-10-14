@@ -15,3 +15,4 @@ jobs:
           token: $
         env:
           PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
+          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
