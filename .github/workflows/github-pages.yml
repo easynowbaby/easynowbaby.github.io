@@ -1,37 +1,37 @@
-name: Build and deploy Jekyll site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - klass-theme
-
-jobs:
-  github-pages:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install dependencies
-        run: sudo apt-get install libvips-tools
-
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-          bundler-cache: true
-
-      - name: Change to Jekyll directory
-        run: cd docs
-
-      - name: Jekyll build
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.FMP_GITHUB_TOKEN }}
-          publish_dir: ./_site
-          branch: klass-theme
+#name: Build and deploy Jekyll site to GitHub Pages
+#
+#on:
+#  push:
+#    branches:
+#      - klass-theme
+#
+#jobs:
+#  github-pages:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Install dependencies
+#        run: sudo apt-get install libvips-tools
+#
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#
+#      - name: 💎 setup ruby
+#        uses: ruby/setup-ruby@v1
+#        with:
+#          ruby-version: 2.7
+#          bundler-cache: true
+#
+#      - name: Change to Jekyll directory
+#        run: cd docs
+#
+#      - name: Jekyll build
+#        run: bundle exec jekyll build
+#        env:
+#          JEKYLL_ENV: production
+#
+#      - name: Deploy to GitHub Pages
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.FMP_GITHUB_TOKEN }}
+#          publish_dir: ./_site
+#          branch: klass-theme
