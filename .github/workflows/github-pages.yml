@@ -25,7 +25,7 @@ jobs:
         run: cd docs
 
       - name: Jekyll build
-        run: bundle exec jekyll build --source docs
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
