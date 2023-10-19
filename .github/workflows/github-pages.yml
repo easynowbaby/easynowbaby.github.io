@@ -21,6 +21,9 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
+      - name: Change to Jekyll directory
+        run: cd docs
+
       - name: Jekyll build
         run: bundle exec jekyll build --source docs
         env:
