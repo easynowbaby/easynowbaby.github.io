@@ -31,6 +31,8 @@ jobs:
 
       - name: Jekyll build
         run: bundle exec jekyll build
+        with:
+          jekyll_src: 'docs'
         env:
           JEKYLL_ENV: production
 
