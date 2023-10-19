@@ -30,7 +30,7 @@ jobs:
           bundler-cache: true
 
       - name: Jekyll build
-        run: cd docs && bundle exec jekyll build --source docs
+        run: bundle exec jekyll build --source docs
         env:
           JEKYLL_ENV: production
 
