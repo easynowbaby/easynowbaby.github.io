@@ -1,14 +1,11 @@
 ---
 layout: base
 ---
-<article class="post">
+<!-- MAIN CONTENT START -->
+<div class="main-content page-header">
+    <div class="container page-header__content ">
+        <h2 class="wow fadeIn page-header__title heading-corners" data-wow-duration="3s" data-wow-delay="1s">{{ page.title | escape }}</h2>
+    </div>
+</div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+{{ content }}

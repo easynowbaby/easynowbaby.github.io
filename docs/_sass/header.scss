@@ -1,0 +1,21 @@
+.header-menu-content {
+	width: 100%;
+}
+
+.header {
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__logo-link {
+		display: flex;
+	}
+
+	&__logo-img {
+		width: 80px;
+	}
+}

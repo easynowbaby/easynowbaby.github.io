@@ -26,6 +26,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: sudo apt-get install libvips-tools
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
@@ -39,6 +41,8 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         env:
           JEKYLL_DESTINATION: docs
+          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
+          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
 
   # Deployment job
   deploy:
