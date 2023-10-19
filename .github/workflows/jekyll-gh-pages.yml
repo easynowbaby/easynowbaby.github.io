@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         env:
-          JEKYLL_DESTINATION: docs
+#          JEKYLL_DESTINATION: docs
           PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
           GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
 

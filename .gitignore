@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-/theme
-=======
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
 theme
->>>>>>> aa00801 (github workflow set up)
