@@ -9,30 +9,20 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Install libvips
+      - name: Install dependencies
         run: sudo apt-get install libvips-tools
 
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Change to Jekyll directory
-        run: cd docs
-
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
         with:
-          ruby-version: 2.7
-          bundler-cache: true
-
-      - name: Jekyll build
-        run: bundle exec jekyll build
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - uses: helaili/jekyll-action@2.1.0
+        with:
+          token: ${{ secrets.FMP_GITHUB_TOKEN }}
+          jekyll_src: 'docs'
         env:
-          JEKYLL_ENV: production
-
-#      - uses: helaili/jekyll-action@2.1.0
-#        with:
-#          token: ${{ secrets.FMP_GITHUB_TOKEN }}
-#          jekyll_src: 'docs'
-#        env:
-#          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
-#          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
+          PAGES_PAGES_HOSTNAME: https://bindingblankpages.band
+          GITHUB_TOKEN: ${{ secrets.FMP_GITHUB_TOKEN }}
