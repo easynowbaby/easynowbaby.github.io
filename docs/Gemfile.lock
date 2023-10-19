@@ -56,6 +56,10 @@ GEM
     mime-types (3.5.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2023.1003)
+    minima (2.5.1)
+      jekyll (>= 3.5, < 5.0)
+      jekyll-feed (~> 0.9)
+      jekyll-seo-tag (~> 2.1)
     objective_elements (1.1.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -84,6 +88,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-seo-tag (~> 2.7.1)
   jekyll_picture_tag (~> 2.0)
+  minima
   webrick (~> 1.8)
 
 BUNDLED WITH
