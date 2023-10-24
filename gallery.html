@@ -6,13 +6,11 @@ permalink: /gallery/
 
 <div class="portfolio">
     <div class="portfolio-list container">
-        <div class="portfolio-container row">
+        <div class="portfolio-container row" id="gallery">
             <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12 portfolio-item artwork">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default matt2.jpg 4:3 %}
-                    </div>
-                </a>
+                <div class="portfolio-column">
+                    {% picture default matt2.jpg 4:3 --link {{"/assets/images/matt2.jpg"}} %}
+                </div>
             </div>
 
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item webdesign">

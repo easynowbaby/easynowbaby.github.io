@@ -23,6 +23,14 @@ $(window).on("load", function() {
         });
     });
 
+	const lightbox = new PhotoSwipeLightbox({
+		gallery: '#gallery',
+		children: 'a',
+		pswpModule: PhotoSwipe
+	});
+
+	lightbox.init();
+
 
 });
 
