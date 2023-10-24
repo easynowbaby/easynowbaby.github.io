@@ -3,8 +3,8 @@ $(window).on("load", function() {
 
     "use strict";
 
-    //Preloader
-	  $("#preloader").delay(200).fadeOut("slow");
+	//Preloader
+	//   $("#preloader").delay(200).fadeOut("slow");
 
 
     // Mobile Menu
@@ -23,32 +23,13 @@ $(window).on("load", function() {
         });
     });
 
+	const lightbox = new PhotoSwipeLightbox({
+		gallery: '#gallery',
+		children: 'a',
+		pswpModule: PhotoSwipe
+	});
 
-
-
-    // Portfolio Masonry
-    var $container = $('#portfolio-container');
-    $container.isotope({
-      masonry: {
-       columnWidth: '.portfolio-item'
-      },
-      itemSelector: '.portfolio-item'
-    });
-    $('#filters').on( 'click', 'li', function() {
-      $('#filters li').removeClass('active');
-      $(this).addClass('active');
-      var filterValue = $(this).attr('data-filter');
-      $container.isotope({ filter: filterValue });
-    });
-
-    // Blog Masonry
-    var $blog_container = $('#main-blog-container');
-    $blog_container.isotope({
-      masonry: {
-       columnWidth: '.blog-item'
-      },
-      itemSelector: '.blog-item'
-    });
+	lightbox.init();
 
 
 });
@@ -60,5 +41,6 @@ $(window).scroll(function() {
     } else {
         $("#sticky").removeClass("sticky");
     }
-
 });
+
+
