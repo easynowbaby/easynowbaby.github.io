@@ -1,0 +1,32 @@
+.contact {
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item {
+		margin-bottom: 15px;
+	}
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		font-size: 20px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__icon {
+		margin-right: 12px;
+	}
+
+	@media screen and (min-width: $bp-lg) {
+		&__link {
+			font-size: 28px;
+		}
+		&__item {
+			margin-bottom: 20px;
+		}
+		&__heading {
+			margin-top: 0;
+		}
+	}
+}

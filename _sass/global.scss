@@ -16,7 +16,7 @@ a {
 	color: $font-white;
 	cursor: pointer;
 	transition: color .5s;
-	text-decoration: none !important;
+	//text-decoration: none !important;
 
 	&:hover {
 		color: white
@@ -147,26 +147,4 @@ a {
 
 .portfolio-column:hover {
 	margin-top: 0;
-}
-
-.portfolio-item-link {
-	position: relative;
-	padding-bottom: 75%;
-	display: block;
-	overflow: hidden;
-
-	picture {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-	}
-
-	&--align-top {
-		picture {
-			transform: translate(-50%, -25%);
-		}
-	}
-
 }

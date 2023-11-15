@@ -1,0 +1,34 @@
+.portfolio-item-link {
+	position: relative;
+	padding-bottom: 75%;
+	display: block;
+	overflow: hidden;
+
+	&:hover {
+		picture {
+			transform: translate(-50%, -50%) scale(1.03);
+		}
+	}
+
+	picture {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		transition: transform .4s ease;
+	}
+
+	&--align-top {
+		&:hover {
+			picture {
+				transform: translate(-50%, -25%) scale(1.03);
+			}
+		}
+
+		picture {
+			transform: translate(-50%, -25%);
+		}
+	}
+
+}
