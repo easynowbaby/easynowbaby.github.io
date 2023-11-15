@@ -78,13 +78,14 @@
             </div>
         </div>
     </header>
+    {% assign current = page.url | downcase |  %}
     <nav class="header-menu-container">
         <div class="header-menu-content">
             <ul>
-                <li><a href="/">home</a></li>
-                <li><a href="/about">about</a></li>
-                <li><a href="/gallery">gallery</a></li>
-                <li><a href="/contact">contact</a></li>
+                <li><a href="/" {% if current == '/' %}class='current'{% endif %}>home</a></li>
+                <li><a href="/about" {% if current == '/about/' %}class='current'{% endif %}>about</a></li>
+                <li><a href="/gallery" {% if current == '/gallery/' %}class='current'{% endif %}>gallery</a></li>
+                <li><a href="/contact" {% if current == '/contact/' %}class='current'{% endif %}>contact</a></li>
             </ul>
         </div>
     </nav>
