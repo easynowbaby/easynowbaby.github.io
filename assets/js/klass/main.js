@@ -26,6 +26,7 @@ $(window).on("load", function() {
 	const lightbox = new PhotoSwipeLightbox({
 		gallery: '#gallery',
 		children: 'a',
+		showHideAnimationType: 'fade',
 		pswpModule: PhotoSwipe
 	});
 

@@ -7,72 +7,99 @@ permalink: /gallery/
 <div class="portfolio">
     <div class="portfolio-list container">
         <div class="portfolio-container row" id="gallery">
-            <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12 portfolio-item artwork">
+            <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12 portfolio-item">
                 <div class="portfolio-column">
-                    {% picture default matt2.jpg 4:3 --link {{"/assets/images/matt2.jpg"}} %}
+                    <a
+                        class="portfolio-item-link portfolio-item-link--align-top"
+                        href="{{"/assets/images/matt2.jpg"}}"
+                        data-cropped="true"
+                        data-pswp-width="1080"
+                        data-pswp-height="1620" >
+                            {% picture default matt2.jpg %}
+                    </a>
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item webdesign">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default david1.jpg 4:3 center %}
-                    </div>
-                </a>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                <div class="portfolio-column">
+                    <a
+                        class="portfolio-item-link"
+                        href="{{"/assets/images/david1.jpg"}}"
+                        data-pswp-width="1080"
+                        data-pswp-height="1350" >
+                            {% picture default david1.jpg center %}
+                    </a>
+                </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item webdesign">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default ivo1.jpg 4:3 center %}
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item artwork">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default aris1.jpg 4:3 center %}
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12 portfolio-item artwork">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default matt1.jpg 4:3 %}
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item webdesign">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default david2.jpg 4:3 %}
-                    </div>
-                </a>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                <div class="portfolio-column">
+                    <a
+                        class="portfolio-item-link"
+                        href="{{"/assets/images/ivo1.jpg"}}"
+                        data-pswp-width="922"
+                        data-pswp-height="950" >
+                            {% picture default ivo1.jpg center %}
+                    </a>
+                </div>
             </div>
 
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item artwork">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default aris2.jpg 4:3 %}
-                    </div>
+                <div class="portfolio-column">
+                    <a
+                        class="portfolio-item-link"
+                        href="{{"/assets/images/aris1.jpg"}}"
+                        data-pswp-width="827"
+                        data-pswp-height="805" >
+                            {% picture default aris1.jpg center %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12 portfolio-item">
+                <div class="portfolio-column">
+                    <a
+                        class="portfolio-item-link "
+                        href="{{"/assets/images/matt1.jpg"}}"
+                        data-pswp-width="1080"
+                        data-pswp-height="1066" >
+                            {% picture default matt1.jpg center %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                <div class="portfolio-column">
+                    <a
+                        class="portfolio-item-link "
+                        href="{{"/assets/images/david2.jpg"}}"
+                        data-pswp-width="1080"
+                        data-pswp-height="1350" >
+                          {% picture default david2.jpg center %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                <a
+                    class="portfolio-item-link "
+                    href="{{"/assets/images/aris2.jpg"}}"
+                    data-pswp-width="1250"
+                    data-pswp-height="1000" >
+                        {% picture default aris2.jpg center %}
                 </a>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item webdesign">
-                <a href="portfolio-single.html">
-                    <div class="portfolio-column">
-                        {% picture default ivo2.jpg 4:3 %}
-                    </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                <a
+                    class="portfolio-item-link portfolio-item-link"
+                    href="{{"/assets/images/ivo2.jpg"}}"
+                    data-pswp-width="1259"
+                    data-pswp-height="1350" >
+                        {% picture default ivo2.jpg center %}
                 </a>
             </div>
 
         </div>
-        <!-- ALL WORKS BUTTTON START -->
-        <div class="portfolio-button"><a class="btn wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" href="#">LOAD
-            MORE</a></div>
-        <!-- ALL WORKS BUTTTON END -->
     </div>
 </div>
